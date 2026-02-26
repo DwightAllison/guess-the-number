@@ -15,8 +15,8 @@ def get_guess() -> int:
 
         print(f"Please enter a whole number from {MIN_NUM} to {MAX_NUM}.")
 
-def play() -> None:
-    print("Guess the number game")
+def play_one_game() -> None:
+    print("\nGuess the number game")
     secret = random.randint(MIN_NUM, MAX_NUM)
     attempts = 0
 
@@ -31,6 +31,14 @@ def play() -> None:
             print("Too low. Try again.")
         else:
             print("Too high. Try again.")
+
+def play() -> None:
+    while True:
+        play_one_game()
+        again = input("Play again? (y/n): ").strip().lower()
+        if again != "y":
+            print("Thanks for playing!")
+            break
 
 if __name__ == "__main__":
     play()
