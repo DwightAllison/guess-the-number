@@ -34,4 +34,4 @@ This project helped reinforce:
 - Structuring a simple program
 - Using GitHub for version control
 
-guess the number by DA
+guess the number by Dwight Allison
